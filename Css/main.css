@@ -1,8 +1,8 @@
 :root {
     --primaria: #3e4095;
-    --secundaria: #00afee;
+    --secundario: #00Afee;
     --laranja: #f58634;
-    --texto: #4b4b4b;
+    --texto: #2f2f2f;
     --label-categoria: #d9c505;
 }
 
@@ -14,14 +14,13 @@
 }
 
 body {
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 #cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 10px;
     height: 65px;
@@ -30,12 +29,13 @@ body {
 .container {
     max-width: 1140px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #menu ul {
     display: flex;
     list-style: none;
-
 }
 
 #menu ul li {
@@ -50,18 +50,19 @@ body {
 
 #botao-menu-mobile {
     display: none;
-    /* Esconder o elemento da tela */
+    /* Desaparecer elementos da tela */
 }
 
+
 .btn-secundario {
-    background-color: var(--secundaria);
+    background-color: var(--secundario);
     padding: 5px 15px 5px 15px;
     border-radius: 5px;
     color: #ffffff;
 }
 
 #banner {
-    background-image: url(../Img/banner.png);
+    background-image: url("../img/banner.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
@@ -85,17 +86,38 @@ body {
 #formPesquisa form {
     display: flex;
     align-items: center;
+    padding: 5px;
 }
 
 #formPesquisa form input {
     height: 40px;
-    font-size: .5em;
+    font-size: 1rem;
     border: none;
 }
 
-#formPesquisa form input i {
+#formPesquisa form i {
     padding: 10px;
     font-size: 1.2rem;
+}
+
+#formPesquisa button {
+    background-color: var(--primaria);
+    font-size: 1.2rem;
+    height: 40px;
+    border: none;
+    width: 150px;
+    border-radius: 20px;
+    color: #ffffff;
+
+}
+
+.lista-servicos-banner ul li {
+    display: inline-block;
+    margin: 10px;
+    font-size: 0.8em;
+    border: 1px dotted #fff;
+    padding: 5px 20px;
+    border-radius: 50px;
 }
 
 .secao-titulo {
@@ -117,7 +139,7 @@ body {
     font-weight: 500;
 }
 
-/* Lista de categorias */
+/* Lista de Categorias */
 
 .lista-card-categorias {
     display: flex;
@@ -141,6 +163,7 @@ body {
     top: 10px;
     background-color: var(--laranja);
     color: #fff;
+    padding: 0px 20px;
     font-size: 12px;
     border-radius: 15px;
 }
@@ -156,11 +179,107 @@ body {
     width: 100%;
     height: auto;
     border-radius: 15px;
+    filter: brightness(70%);
+    -webkit-filter: brightness(70%);
 }
 
 .card-servicos {
-    width: calc(33% - 30px);
+    flex-grow: 1;
+    width: calc((100% /3) - 30px);
 }
+
+.card-foto {
+    position: relative;
+}
+
+.card-foto-legenda {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.card-foto-preco {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card-foto-categoria {
+    background-color: var(--label-categoria);
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.card-descricao-legenda {
+    display: flex;
+    justify-content: space-between;
+}
+
+#rodape {
+    margin-top: 50px;
+    border-top: 2px solid #ccc;
+    padding-top: 30px;
+}
+
+#linha-rodape {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.coluna-rodape {
+    width: 25%;
+}
+
+.coluna-rodape a {
+    color: var(--texto);
+    margin-top: 5px;
+    display: block;
+}
+
+.coluna-rodape a:hover {
+    color: var(--primaria);
+    font-weight: 500;
+}
+
+.coluna-rodape ul {
+    list-style: none;
+}
+
+.coluna-rodape i {
+    color: var(--primaria);
+}
+
+.rede-social {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.rede-social a {
+    background-color: #ededed;
+    font-size: 24px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.copyright {
+    background-color: #ccc;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 30px;
+}
+
 
 
 
@@ -171,27 +290,96 @@ body {
 /* Estilo Mobile */
 
 @media (max-width: 767px) {
-    display: block;
-    /* Mostrar elemento na tela */
-    padding: 10px;
-    cursor: pointer;
-    font-size: 10px;
-}
 
-#menu {
-    position: absolute;
-    background-color: #fff;
-    width: 250px;
-    height: 100vh;
-    top: 65px;
-    z-index: 99999;
-    box-shadow: 2px 5px 10px #2f2f2f;
-}
+    #cabecalho{
+        position: fixed;
+        background-color: #fff;
+        width: 100%;
+        z-index: 999999;
+    }
 
-#menu ul{
-    display: block;
-}
+    #logotipo img{
+        height: 30px;
+    }
 
-#menu li{
-    padding: 10px;
+    #banner{
+        padding-top: 60px;
+        min-height: 330px;
+    }
+
+    #botao-menu-mobile {
+        display: block;
+        /* Mostrar elemento na tela*/
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    #menu {
+        position: fixed;
+        background-color: #fff;
+        width: 250px;
+        height: 100vh;
+        top: 65px;
+        left: -255px;
+        z-index: 999999;
+        box-shadow: 2px 5px 5px #2f2f2f;
+        transition: left 0.5s;
+    }
+
+    #menu.menu-ativo {
+        left: 0;
+    }
+
+    #menu ul {
+        margin-top: 30px;
+        display: block;
+    }
+
+    #menu li {
+        padding: 10px;
+    }
+
+    #formPesquisa{
+        margin-left: 15p;
+        margin-right: 15px;
+        border-radius: 10px;
+    }
+
+    #formPesquisa form{
+        flex-direction: column;
+    }
+
+    #formPesquisa input {
+        flex-grow: 1;
+    }
+
+    .form-icon{
+        width: 100%;
+        display: flex;
+    }
+
+    .lista-servicos-banner{
+        display: none;
+    }
+
+    #banner h2{
+        font-size: 20px;
+    }
+
+    #banner p{
+       font-size: 14px;
+    }
+
+    .card-servicos {
+        flex-grow: 1;
+        width: calc((100% /2) - 30px);
+    }
+
+    .coluna-rodape {
+        width: 50%;
+    }
+    
+    
+
 }
