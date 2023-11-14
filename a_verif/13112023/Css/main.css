@@ -156,7 +156,7 @@ body {
     position: relative;
 }
 
-.lista-card-categorias .item span {
+.lista-card-categorias span {
     display: block;
     position: absolute;
     left: 10px;
@@ -185,7 +185,7 @@ body {
 
 .card-servicos {
     flex-grow: 1;
-    width: calc((100% / 3) - 30px);
+    width: calc((100% /3) - 30px);
 }
 
 .card-foto {
@@ -291,18 +291,18 @@ body {
 
 @media (max-width: 767px) {
 
-    #cabecalho {
+    #cabecalho{
         position: fixed;
         background-color: #fff;
         width: 100%;
         z-index: 999999;
     }
 
-    #logotipo img {
+    #logotipo img{
         height: 30px;
     }
 
-    #banner {
+    #banner{
         padding-top: 60px;
         min-height: 330px;
     }
@@ -316,7 +316,6 @@ body {
     }
 
     #menu {
-
         position: fixed;
         background-color: #fff;
         width: 250px;
@@ -341,13 +340,13 @@ body {
         padding: 10px;
     }
 
-    #formPesquisa {
-        margin-left: 15px;
+    #formPesquisa{
+        margin-left: 15p;
         margin-right: 15px;
         border-radius: 10px;
     }
 
-    #formPesquisa form {
+    #formPesquisa form{
         flex-direction: column;
     }
 
@@ -355,29 +354,32 @@ body {
         flex-grow: 1;
     }
 
-    .form-icon {
-        display: flex;
+    .form-icon{
         width: 100%;
+        display: flex;
     }
 
-    .lista-servicos-banner {
+    .lista-servicos-banner{
         display: none;
     }
 
-    #banner h2 {
+    #banner h2{
         font-size: 20px;
     }
 
-    #banner p {
-        font-size: 14px;
+    #banner p{
+       font-size: 14px;
     }
 
     .card-servicos {
         flex-grow: 1;
-        width: calc((100% / 2) - 30px);
+        width: calc((100% /2) - 30px);
     }
 
     .coluna-rodape {
         width: 50%;
     }
+    
+    
+
 }
